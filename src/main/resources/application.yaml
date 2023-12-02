@@ -1,0 +1,35 @@
+server:
+  port: 9093
+  ssl:
+    enabled: false
+
+spring:
+  application:
+    name: task-management
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 7787
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+  mail:
+    host: smtp.your-email-provider.com
+    port: 587
+    username: username
+    password: password
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  security:
+    name: user
+    password: A9#p2L$y8z!
+    roles: USER
