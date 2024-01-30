@@ -21,7 +21,8 @@ public class UserService {
     public User signIn(String username, String password) {
 
 
-        User user = userRepository.findById();
+        User user = userRepository.findById(userId).orElse(null);
+
 
 
         if (user != null && passwordEncoder.matches(password, user.getPassword())) {

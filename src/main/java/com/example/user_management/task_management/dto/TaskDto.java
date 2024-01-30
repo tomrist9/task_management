@@ -1,4 +1,4 @@
-package com.example.user_management.dto;
+package com.example.user_management.task_management.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

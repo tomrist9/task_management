@@ -1,7 +1,7 @@
-package com.example.user_management.dao.entity;
+package com.example.user_management.task_management.dao.entity;
 
-import com.example.user_management.dto.TaskPriority;
-import com.example.user_management.dto.TaskStatus;
+import com.example.user_management.task_management.dto.TaskPriority;
+import com.example.user_management.task_management.dto.TaskStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

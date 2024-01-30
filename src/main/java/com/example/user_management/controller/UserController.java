@@ -1,43 +1,57 @@
-package com.example.user_management.registration.controller;
+package com.example.user_management.controller;
 
 import com.example.user_management.registration.entity.User;
 import com.example.user_management.registration.service.UserService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/api/v1/users")
 public class UserController {
     private final UserService userService;
+
     @Autowired
     public UserController(UserService userService) {
         this.userService = userService;
     }
-   @GetMapping
-    private List<User> getAllUsers(){
-        return userService.getAllUsers();
-   }
-  @GetMapping("/{userId}")
-   private Optional<User> getUserById(@PathVariable Long userId){
-        return userService.getUserById(userId);
 
-   }
-  @PostMapping
-    private User createUser(@RequestBody User user){
-        return userService.createUser(user);
-  }
+    @PostMapping("/sign-up")
+    @Operation(summary = "This endpoint helps us to sign up",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "The request was successful"),
+                    @ApiResponse(responseCode = "400", description = "There is incoming request validation error"),
+                    @ApiResponse(responseCode = "409", description = "There is a conflict with the current state of the resource, preventing the request from being completed."),
+                    @ApiResponse(responseCode = "417", description = "The server cannot meet the expectations specified in the request"),
+                    @ApiResponse(responseCode = "500", description = "An unexpected error occurred on the server.")
+            })
+    public JWTToken signUp(@RequestBody @Valid UserSignInRequest userSignInRequest) {
+        return userService.signIn(userSignInRequest);
+    }
 
- @PutMapping("/{userId}")
-    private User updateUser(@PathVariable Long userId, @RequestBody User user){
-        return userService.updateUser(userId, user);
- }
+    @PostMapping("/recover")
+    @Operation(summary = "This endpoint helps us to recover your sccount",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "The request was successful"),
+                    @ApiResponse(responseCode = "400", description = "There is incoming request validation error"),
+                    @ApiResponse(responseCode = "409", description = "There is a conflict with the current state of the resource, preventing the request from being completed."),
+                    @ApiResponse(responseCode = "417", description = "The server cannot meet the expectations specified in the request"),
+                    @ApiResponse(responseCode = "500", description = "An unexpected error occurred on the server.")
+            })
 
-    @DeleteMapping("/{userId}")
-    public void deleteUser(@PathVa6riable Long userId) {
-        userService.deleteUser(userId);
+    public void sendOTP(@RequestBody @Valid UserRecoverAccountRequest userRecoverAccountRequest) {
+        userService.sendOTP(userRecoverAccountRequest);
+    }
+
+    @PostMapping("/recover/otp")
+    public void recover(@RequestBody @Valid UserRecoverAccountOTPRequest userRecoverAccountOTPRequest) {
+        userService.recover(userRecoverAccountOTPRequest);
+
     }
 
 }

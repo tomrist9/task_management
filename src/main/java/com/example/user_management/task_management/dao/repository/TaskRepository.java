@@ -1,6 +1,6 @@
-package com.example.user_management.dao.repository;
+package com.example.user_management.task_management.dao.repository;
 
-import com.example.user_management.dao.entity.TaskEntity;
+import com.example.user_management.task_management.dao.entity.TaskEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

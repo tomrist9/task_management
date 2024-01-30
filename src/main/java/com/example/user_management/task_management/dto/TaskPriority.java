@@ -1,4 +1,4 @@
-package com.example.user_management.dto;
+package com.example.user_management.task_management.dto;
 
 public enum TaskPriority {
     NOT_URGENT,

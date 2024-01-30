@@ -1,16 +1,18 @@
-package com.example.user_management.task_management.controller;
+package com.example.user_management.controller;
 
 import com.example.user_management.task_management.dao.entity.TaskEntity;
 import com.example.user_management.task_management.dto.TaskDto;
 import com.example.user_management.task_management.service.TaskService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/tasks")
+@RequestMapping("api/v1/tasks")
+
 public class TaskController {
 private final TaskService taskService;
 

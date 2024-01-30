@@ -16,6 +16,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .rememberMe()
                 .key("uniqueAndSecret")
-                .tokenValiditySeconds(604800); // 7 days
+                .tokenValiditySeconds(604800);
     }
 }

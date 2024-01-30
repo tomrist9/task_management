@@ -1,10 +1,9 @@
 package user_management.service
 
-import com.example.user_management.service.TaskService
-import com.example.user_management.dao.entity.TaskEntity
-import com.example.user_management.dto.TaskDto
-import com.example.user_management.mapper.TaskMapper
-import com.example.user_management.dao.repository.TaskRepository
+import com.example.user_management.task_management.service.TaskService
+import com.example.user_management.task_management.dto.TaskDto
+import com.example.user_management.signin.mapper.TaskMapper
+import com.example.user_management.task_management.dao.repository.TaskRepository
 import io.github.benas.randombeans.EnhancedRandomBuilder
 import io.github.benas.randombeans.api.EnhancedRandom
 import spock.lang.Specification

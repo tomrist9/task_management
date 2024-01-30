@@ -29,7 +29,24 @@ spring:
           starttls:
             enable: true
 
-  security:
-    name: user
-    password: A9#p2L$y8z!
-    roles: USER
+
+security:
+  auth:
+    whitelist: >
+      /swagger-resources,
+      /swagger-resources/**,
+      /configuration/ui,  
+      /configuration/security,
+      /swagger-ui.html,
+      /webjars/**,
+      /api/public/**,
+      /v3/api-docs/**,
+      /v3/api-docs,
+      /swagger-ui/**,
+      /v2/api-docs,
+      /api/v1/public/**,
+      /ws-registration/**,
+      /api/v1/users/**
+
+  jwt:
+    secret-key: ${TASK_MANAGEMENT_JWT_SECRET_KEY}

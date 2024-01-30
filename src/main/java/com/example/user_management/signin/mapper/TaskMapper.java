@@ -1,7 +1,7 @@
-package com.example.user_management.mapper;
+package com.example.user_management.signin.mapper;
 
-import com.example.user_management.dao.entity.TaskEntity;
-import com.example.user_management.dto.TaskDto;
+import com.example.user_management.task_management.dao.entity.TaskEntity;
+import com.example.user_management.task_management.dto.TaskDto;
 import org.mapstruct.Mapper;
 
 import org.mapstruct.factory.Mappers;
