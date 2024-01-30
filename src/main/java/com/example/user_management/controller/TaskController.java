@@ -1,8 +1,8 @@
 package com.example.user_management.task_management.controller;
 
-import com.example.user_management.dao.entity.TaskEntity;
-import com.example.user_management.dto.TaskDto;
-import com.example.user_management.service.TaskService;
+import com.example.user_management.task_management.dao.entity.TaskEntity;
+import com.example.user_management.task_management.dto.TaskDto;
+import com.example.user_management.task_management.service.TaskService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.springframework.web.bind.annotation.*;
