@@ -4,8 +4,10 @@ package com.example.user_management.registration.entity;
 import lombok.*;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.annotation.Id;
+import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
 @Data
@@ -26,6 +28,11 @@ public class User {
     private String email;
     @Column(name="password")
     private String password;
+    @Getter
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(name = "user_authorities", joinColumns = @JoinColumn(name = "user_id"))
+    @Column(name = "authority")
+    private Collection<GrantedAuthority> authorities;
 
     public void setId(Long id) {
         this.userId = userId;
@@ -34,4 +41,9 @@ public class User {
     public Long getId() {
         return userId;
     }
+
+    public void setAuthorities(Collection<GrantedAuthority> authorities) {
+        this.authorities = authorities;
+    }
+
 }
