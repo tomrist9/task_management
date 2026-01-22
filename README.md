@@ -41,24 +41,29 @@ The project is designed using clean architecture principles and a layered struct
 
 ## 📁 Project Structure
 
+## 📁 Project Structure
+
+```text
 src/main/java/com/example/user_management
 │
-├── config # Application & security configurations
-├── constant # Constants & enums
-├── controller # REST controllers
-├── dao # Data access layer
-├── exceptions # Custom exception handling
-├── mapper # DTO ↔ Entity mappers
-├── model # Domain models / entities
-├── notification # Notification-related logic
-├── registration # User registration & verification
-├── repository # JPA repositories
-├── security # Security configurations
-├── service # Business logic
-├── signin # Authentication logic
-├── task_management # Task-related logic
+├── config            # Application & security configurations
+├── constant          # Constants & enums
+├── controller        # REST controllers
+├── dao               # Data access layer
+├── exceptions        # Custom exception handling
+├── mapper            # DTO ↔ Entity mappers
+├── model             # Domain models / entities
+├── notification      # Notification-related logic
+├── registration      # User registration & verification
+├── repository        # JPA repositories
+├── security          # Security configurations
+├── service           # Business logic
+├── signin            # Authentication logic
+├── task_management   # Task-related logic
 │
 └── UserManagementApplication.java
+```
+
 
 
 ---
