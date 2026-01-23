@@ -68,7 +68,7 @@ src/main/java/com/example/user_management
 
 ---
 
-## 🔄 API Overview
+##  API Overview
 
 - `POST /auth/login` – User login
 - `POST /auth/register` – User registration
@@ -81,7 +81,7 @@ src/main/java/com/example/user_management
 
 ---
 
-## ⚙️ How to Run the Project
+##  How to Run the Project
 
 ### Clone the repository
 ```bash
