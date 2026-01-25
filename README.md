@@ -27,7 +27,7 @@ The project is designed using clean architecture principles and a layered struct
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 - Java
 - Spring Boot
