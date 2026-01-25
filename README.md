@@ -41,8 +41,6 @@ The project is designed using clean architecture principles and a layered struct
 
 ## 📁 Project Structure
 
-## 📁 Project Structure
-
 ```text
 src/main/java/com/example/user_management
 │
