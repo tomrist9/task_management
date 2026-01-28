@@ -19,7 +19,7 @@ The project is designed using clean architecture principles and a layered struct
 - Custom authentication exceptions
 - Secured REST endpoints
 
-### 🧩 Architecture & Design
+###  Architecture & Design
 - Layered architecture (Controller, Service, Repository)
 - DTO ↔ Entity mapping
 - Custom exception handling
